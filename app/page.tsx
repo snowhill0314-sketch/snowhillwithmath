@@ -469,7 +469,7 @@ export default function MathSimulatorPage() {
             <span>수학 시각화 교육 도구</span>
           </div>
           <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
-            수직선 정수 계산기
+            정수만큼 움직이기!
           </h1>
           <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
             사람의 몸 방향과 걷는 방향(전진/후진)을 활용하여 정수의 덧셈과 뺄셈의 원리를 쉽게 체험해 보세요.
