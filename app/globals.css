@@ -23,3 +23,53 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
+
+/* 정수 시뮬레이터 애니메이션 및 특수 스타일 */
+
+@keyframes walk-bob {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(0.95, 1.05);
+  }
+}
+
+@keyframes turn-spin {
+  0% {
+    transform: scaleX(var(--direction)) rotateY(0deg);
+  }
+  50% {
+    transform: scaleX(0) rotateY(90deg);
+    filter: brightness(1.5);
+  }
+  100% {
+    transform: scaleX(calc(-1 * var(--direction))) rotateY(180deg);
+  }
+}
+
+.animate-walk-bob {
+  animation: walk-bob 0.4s ease-in-out infinite;
+}
+
+.char-transition {
+  transition: left 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.number-line-glow {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+}
+
+.dark .number-line-glow {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.05);
+}
+
+@keyframes leg-swing-left {
+  0%, 100% { transform: rotate(18deg); }
+  50% { transform: rotate(-18deg); }
+}
+
+@keyframes leg-swing-right {
+  0%, 100% { transform: rotate(-18deg); }
+  50% { transform: rotate(18deg); }
+}
